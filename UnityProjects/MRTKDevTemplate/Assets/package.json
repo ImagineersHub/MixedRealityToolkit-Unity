@@ -2,7 +2,7 @@
      "name": "com.imagineershub.mrtk",
      "displayName": "mrtk3",
      "version": "1.0.0",
-     "unity": "2021.3.21f1",
+     "unity": "2021.3",
      "description": "Mixed Reality Toolkit (MRTK) provides a set of components and features to accelerate cross-platform MR app development in Unity.",
      "keywords": [
          "mrtk"
