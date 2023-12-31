@@ -9,7 +9,7 @@ using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace MixedReality.Toolkit
-{    
+{
     /// <summary>
     /// An extended version of <see cref="MixedReality.Toolkit.MRTKBaseInteractable">MRTKBaseInteractable</see> that adds additional
     /// functionality such as speech support, gaze support, and toggle behaviors.
@@ -25,7 +25,7 @@ namespace MixedReality.Toolkit
         public enum ToggleType
         {
             /// <summary>
-            /// The interactable will not enter toggle states unless forces by code 
+            /// The interactable will not enter toggle states unless forces by code
             /// using the <see cref="ForceSetToggled(bool)"/> function.
             /// </summary>
             Button,
@@ -34,9 +34,9 @@ namespace MixedReality.Toolkit
             /// The user can toggle on and off the interactable.
             /// </summary>
             Toggle,
-            
+
             /// <summary>
-            /// The User can only toggle on the interactable, but not toggle off. 
+            /// The User can only toggle on the interactable, but not toggle off.
             /// This value is useful for radio buttons.
             /// </summary>
             OneWayToggle
@@ -139,7 +139,7 @@ namespace MixedReality.Toolkit
                 }
             }
         }
-        
+
         /// <summary>
         /// Does the voice command require this to have focus?
         /// If true, then the voice command will only respond to voice commands while this Interactable has focus.
@@ -241,7 +241,7 @@ namespace MixedReality.Toolkit
         /// </summary>
         /// <remarks>
         /// Derived classes should override this method to specify custom selection math.
-        /// The default implementation allows for variable selection from 
+        /// The default implementation allows for variable selection from
         /// <see cref="IVariableSelectInteractor"/> objects, calculated using
         /// <see cref="IVariableSelectInteractor.SelectProgress"/>.
         /// </remarks>
@@ -386,7 +386,7 @@ namespace MixedReality.Toolkit
 
         // Attempt to toggle our own IsToggled state.
         // Will obey ToggleMode.
-        private void TryToggle()
+        public void TryToggle()
         {
             // Check whether we're allowed to toggle.
             if (ToggleMode == ToggleType.Button || (ToggleMode == ToggleType.OneWayToggle && IsToggled.Active))
